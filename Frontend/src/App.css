@@ -1,0 +1,268 @@
+
+
+.nav-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    to top right, 
+    #000000, #000001d2
+  );
+  padding: 10px 80px;
+  height: 10.5vh;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+}
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li{
+  list-style: none;
+  padding: 20px 20px;
+  margin-bottom: -20px;
+  position: relative;
+}
+#navbar li a{
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+.hhh{
+  height: 1000px;
+  background-color: #015fea;
+}
+#navbar li a:hover{
+  opacity: 0.8;
+  transition: 0.3s ease-in-out;
+}
+.line:hover:after{
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -4px;
+  left: 25px;
+}
+#mobile{
+  display: none;
+}
+#mobile i{
+  color: #fff;
+  align-items: center;
+  
+}
+.btn1{
+  background-color: #fff;
+  border: none;
+  padding: 0.4rem 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  margin-top: -2px;
+  color: #015fea;
+}
+.btn2{
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  margin-top: 14px;
+  color: #015fea;
+}
+.btn1:hover{
+  color: #fff;
+  background-color: #015fea;
+  transition: 0.3s ease-in-out;
+}
+
+.bas{
+  display: none;
+}
+.dropdown li a{
+  color: black;
+}
+ul li ul.dropdown {
+  width: 15rem; /* Set width of the dropdown */
+  background: whitesmoke;
+  display: none;
+  position: absolute;
+  z-index: 999;
+  margin-top: 20px;
+  left: 0;
+}
+ul li:hover ul.dropdown {
+  display: block; /* Display the dropdown */
+}
+ul li ul.dropdown li {
+  display: block;
+}
+.dropdown {
+  padding: 0;
+  list-style: none;
+  background-color: black;
+}
+.dropdown li {
+  display: inline-block;
+  position: relative;
+  line-height: 2px;
+  text-align: left;
+}
+.dropdown li a {
+  display: block;
+  padding: 10px 2px;
+  text-decoration: none;
+  margin: 10px 0;
+}
+.dropdown li a:hover {
+  color: black;
+}
+
+
+/*---------------------------- Home -----------------------------*/
+.img-bg{
+  padding: 20px 10rem 0px 10rem;
+  border-radius: 12px;
+  background-image: url(assets/images/bg.jpg);
+}
+.sec1{
+  padding: 20px;
+  display: flex;
+}
+.imgCar{
+  height: 30rem;
+  object-fit: contain;
+}
+
+/* Appointment */
+.card1 {
+  position: relative;
+  width: 400px;
+  height: 260px;
+  /* color: #65646a; */
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 12px 0;
+
+}
+
+.temporary_text1 {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 6px 12px;
+}
+
+.card_title1 {
+  font-weight: bold;
+}
+
+.card_content1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+    /* edit the width to fit card */
+  width: 100%;
+  padding: 20px;
+  background: #f2f2f2ad;
+  border-top-left-radius: 20px;
+    /* edit here to change the height of the content box */
+  transform: translateY(150px);
+  transition: transform .25s;
+}
+
+.card_content1::before {
+  content: '';
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+}
+
+.card_title1 {
+  color: #131313;
+  line-height: 15px;
+}
+
+.card_subtitle1 {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card_description1 {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.card1:hover .card_content1 {
+  transform: translateY(0);
+}
+
+.card1:hover .card_description1 {
+  opacity: 1;
+  transition-delay: .25s;
+}
+
+@media screen and (max-width: 984px) {
+  .bas{
+    display: block;
+  }
+  .navbar-header, .btn, .none{
+    display: none;
+  }
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 99999;
+    top: 0px;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+  }
+  #navbar.active{
+    left: 0px;
+  }
+  #navbar li a{
+    color: black;
+    
+  }
+  #mobile{
+    display: block;
+  }
+  #navbar li{
+    margin-bottom: 25px;
+    padding: 10px 20px;
+  }
+  ul li ul.dropdown{
+    margin-top: 10px;
+  }
+  .dropdown li a{
+    margin: 0;
+  }
+  #mobile i{
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .img-bg{
+    padding: 20px;
+  }
+  .sec1{
+    display: block;
+  }
+  .imgCar{
+    height: 10rem;
+  }
+}
